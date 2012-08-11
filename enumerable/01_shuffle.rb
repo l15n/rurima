@@ -4,3 +4,9 @@
 # 　　　　→あまり人数が多いと店に入れないので、
 # 　　　　　10人前後の参加者をランダムに２組に分けたい
 
+def shuffle(members)
+  shuffled = members.shuffle
+  first = shuffled.take(members.length / 2)
+  second = shuffled - first
+  [first, second]
+end
